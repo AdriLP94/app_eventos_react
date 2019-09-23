@@ -1,8 +1,17 @@
 import React from 'react';
+import Header from "./components/Header";
+import Formulario from "./components/Formulario";
+
+import CategoriasProvider from "./context/CategoriasContext";
 
 function App() {
   return (
-    <h1>HOLA</h1>
+    <CategoriasProvider>
+      <Header/>
+      <div className="uk-container">
+        <Formulario/>
+      </div>
+    </CategoriasProvider>
   );
 }
 
