@@ -6,7 +6,7 @@ export const EventosConsumer = EventosContext.Consumer;
 
 class EventosProvider extends Component {
 
-    token = "UO62L43VSNKE7RDW5OXE";
+    token = "IYPPQQY6ZC43CXEKYIFB";
     idioma = "es_ES";
 
     state = {
