@@ -6,7 +6,6 @@ export const EventosConsumer = EventosContext.Consumer;
 
 class EventosProvider extends Component {
 
-    token = "IYPPQQY6ZC43CXEKYIFB";
     idioma = "es_ES";
 
     state = {
@@ -15,7 +14,7 @@ class EventosProvider extends Component {
 
     obtenerEventos = async (busqueda) => {
 
-        let url = `https://www.eventbriteapi.com/v3/events/search/?q=${busqueda.nombre}&categories=${busqueda.categoria}&sort_by=${busqueda.ordenar}&token=${this.token}&locale=${this.idioma}`;
+        let url = `https://www.eventbriteapi.com/v3/events/search/?q=${busqueda.nombre}&categories=${busqueda.categoria}&sort_by=${busqueda.ordenar}&token=${process.env.REACT_APP_APIKEY}&locale=${this.idioma}`;
         const eventos = await axios(url);
 
         this.setState({
